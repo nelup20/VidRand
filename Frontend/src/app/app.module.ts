@@ -2,19 +2,23 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import {FormsModule} from "@angular/forms";
-import {InputTextModule} from "primeng/inputtext";
-import {InputNumberModule} from "primeng/inputnumber";
+import { HeaderComponent } from './partials/header/header.component';
+import { FooterComponent } from './partials/footer/footer.component';
+import {RoutingModule} from "./routing/routing.module";
+import {FeatureModule} from "./feature/feature.module";
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    InputTextModule,
-    InputNumberModule
+    AppRoutingModule,
+    RoutingModule,
+    FeatureModule
   ],
   providers: [],
   bootstrap: [AppComponent]
